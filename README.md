@@ -2,4 +2,14 @@
 -func to get data
 -func to set data through input and btn
 -input component, display component data call
--filter
+-filtered state
+
+problem
+-scroll
+-grid
+-signs
+
+steps
+
+- Addtodo rough input field
+  -setting up firestore functions
