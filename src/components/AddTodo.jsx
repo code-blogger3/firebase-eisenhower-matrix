@@ -1,31 +1,42 @@
 import React, { useState } from "react";
+import "../styles/addTodo.css";
 
 function AddTodo({ createTodo }) {
   const initialTodoData = {
     todo: "",
-    catagory: "",
+    category: "",
   };
   const [newTodo, setNewTodo] = useState(initialTodoData);
-  const [catagory, setCatagory] = useState("");
+  const [category, setCategory] = useState("");
 
   const handleInputChange = (e) => {
     const name = e.target.name;
     const value = e.target.value;
 
-    setNewTodo({
-      ...newTodo,
+    setNewTodo((prevTodo) => ({
+      ...prevTodo,
       [name]: value,
-    });
+    }));
+  };
+
+  const handleCategoryClick = (categoryValue) => {
+    setCategory(categoryValue);
   };
 
   function handleSubmit(e) {
     e.preventDefault();
+
     setNewTodo((prevTodo) => ({
       ...prevTodo,
-      catagory: catagory,
+      category: category,
     }));
     createTodo(newTodo);
-    setNewTodo(newTodo.todo == "");
+
+    // Reset the todo field after submission
+    setNewTodo((prevTodo) => ({
+      ...prevTodo,
+      todo: "",
+    }));
   }
   return (
     <>
@@ -39,18 +50,20 @@ function AddTodo({ createTodo }) {
             onChange={handleInputChange}
           />
         </div>
-        <button onClick={() => setCatagory("Important&Urgent")}>
-          Important&Urgent
-        </button>
-        <button onClick={() => setCatagory("Important&Noturgent")}>
-          Important&Noturgent
-        </button>
-        <button onClick={() => setCatagory("Notimportant&Urgent")}>
-          Notimportant&Urgent
-        </button>
-        <button onClick={() => setCatagory("Notimportant&Noturgent")}>
-          Notimportant&Noturgent
-        </button>
+        <div>
+          <button onClick={() => handleCategoryClick("Important&Urgent")}>
+            Important&Urgent
+          </button>
+          <button onClick={() => handleCategoryClick("Important&Noturgent")}>
+            Important&Noturgent
+          </button>
+          <button onClick={() => handleCategoryClick("Notimportant&Urgent")}>
+            Notimportant&Urgent
+          </button>
+          <button onClick={() => handleCategoryClick("Notimportant&Noturgent")}>
+            Notimportant&Noturgent
+          </button>
+        </div>
       </form>
     </>
   );

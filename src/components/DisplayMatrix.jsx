@@ -1,18 +1,18 @@
-import React, { useState } from "react";
+import "../styles/displayMatrix.css";
 import TodoList from "./TodoList";
 
 function DisplayMatrix({ todos }) {
   const importantUrgentList = todos.filter(
-    (todo) => todo.catagory == "Important&Urgent"
+    (todo) => todo.category == "Important&Urgent"
   );
   const importantNoturgentList = todos.filter(
-    (todo) => todo.catagory == "Important&Noturgent"
+    (todo) => todo.category == "Important&Noturgent"
   );
   const notimportantUrgentList = todos.filter(
-    (todo) => todo.catagory == "Notimportant&Urgent"
+    (todo) => todo.category == "Notimportant&Urgent"
   );
   const notimportantNoturgentList = todos.filter(
-    (todo) => todo.catagory == "Notimportant&Noturgent"
+    (todo) => todo.category == "Notimportant&Noturgent"
   );
 
   return (
