@@ -20,11 +20,12 @@ function AddTodo({ createTodo }) {
 
   function handleSubmit(e) {
     e.preventDefault();
-    setNewTodo({
-      ...newTodo,
+    setNewTodo((prevTodo) => ({
+      ...prevTodo,
       catagory: catagory,
-    });
+    }));
     createTodo(newTodo);
+    setNewTodo(newTodo.todo == "");
   }
   return (
     <>
@@ -33,7 +34,7 @@ function AddTodo({ createTodo }) {
           <label htmlFor="todo">New todo</label>
           <input
             type="text"
-            value={newTodo.todo}
+            value={newTodo.todo || ""}
             name="todo"
             onChange={handleInputChange}
           />

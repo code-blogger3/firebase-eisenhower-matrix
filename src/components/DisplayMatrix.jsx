@@ -17,10 +17,12 @@ function DisplayMatrix({ todos }) {
 
   return (
     <>
-      <TodoList todos={importantUrgentList} />
-      <TodoList todos={importantNoturgentList} />
-      <TodoList todos={notimportantUrgentList} />
-      <TodoList todos={notimportantNoturgentList} />
+      <section>
+        <TodoList todos={importantUrgentList} />
+        <TodoList todos={importantNoturgentList} />
+        <TodoList todos={notimportantUrgentList} />
+        <TodoList todos={notimportantNoturgentList} />
+      </section>
     </>
   );
 }
