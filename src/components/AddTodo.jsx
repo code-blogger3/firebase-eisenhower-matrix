@@ -2,42 +2,15 @@ import React, { useState } from "react";
 import "../styles/addTodo.css";
 
 function AddTodo({ createTodo }) {
-  const initialTodoData = {
-    todo: "",
-    category: "",
-  };
-  const [newTodo, setNewTodo] = useState(initialTodoData);
-  const [category, setCategory] = useState("");
-
-  const handleInputChange = (e) => {
-    const name = e.target.name;
-    const value = e.target.value;
-
-    setNewTodo((prevTodo) => ({
-      ...prevTodo,
-      [name]: value,
-    }));
-  };
-
-  const handleCategoryClick = (categoryValue) => {
-    setCategory(categoryValue);
-  };
+  const [newTodo, setNewTodo] = useState("");
 
   function handleSubmit(e) {
     e.preventDefault();
-
-    setNewTodo((prevTodo) => ({
-      ...prevTodo,
-      category: category,
-    }));
-    createTodo(newTodo);
-
-    // Reset the todo field after submission
-    setNewTodo((prevTodo) => ({
-      ...prevTodo,
-      todo: "",
-    }));
+    const categoryValue = e.nativeEvent.submitter.value;
+    createTodo({ todo: newTodo, category: categoryValue });
+    setNewTodo("");
   }
+
   return (
     <>
       <form onSubmit={handleSubmit}>
@@ -45,24 +18,16 @@ function AddTodo({ createTodo }) {
           <label htmlFor="todo">New todo</label>
           <input
             type="text"
-            value={newTodo.todo || ""}
+            value={newTodo}
             name="todo"
-            onChange={handleInputChange}
+            onChange={(e) => setNewTodo(e.target.value)}
           />
         </div>
         <div>
-          <button onClick={() => handleCategoryClick("Important&Urgent")}>
-            Important&Urgent
-          </button>
-          <button onClick={() => handleCategoryClick("Important&Noturgent")}>
-            Important&Noturgent
-          </button>
-          <button onClick={() => handleCategoryClick("Notimportant&Urgent")}>
-            Notimportant&Urgent
-          </button>
-          <button onClick={() => handleCategoryClick("Notimportant&Noturgent")}>
-            Notimportant&Noturgent
-          </button>
+          <button value="Important&Urgent">Important&Urgent</button>
+          <button value="Important&Noturgent">Important&Noturgent</button>
+          <button value="Notimportant&Urgent">Notimportant&Urgent</button>
+          <button value="Notimportant&Noturgent">Notimportant&Noturgent</button>
         </div>
       </form>
     </>
@@ -70,3 +35,22 @@ function AddTodo({ createTodo }) {
 }
 
 export default AddTodo;
+
+{
+  /* {buttons.map((button, index) => (
+  <button key={index} onClick={categoryClicks[index]}>
+    {button}
+  </button>
+))} */
+}
+
+// const buttons = [
+//   "Important&Urgent",
+//   "Important&Noturgent",
+//   "Notimportant&Urgent",
+//   "Notimportant&Noturgent",
+// ];
+
+// const categoryClicks = buttons.map((categoryValue) =>
+//   handleCategoryClick(categoryValue)
+// // );
