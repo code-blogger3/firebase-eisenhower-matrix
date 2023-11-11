@@ -18,21 +18,29 @@ function DisplayMatrix({ todos }) {
   return (
     <>
       <section className="eisenhower-matrix">
-        <div className="todo-list important-urgent">
+        <div>
           <h2>Important & Urgent</h2>
-          <TodoList todos={importantUrgentList} />
+          <div className="todo-list important-urgent">
+            <TodoList todos={importantUrgentList} />
+          </div>
         </div>
-        <div className="todo-list important-noturgent">
+        <div>
           <h2>Important & Not Urgent</h2>
-          <TodoList todos={importantNoturgentList} />
+          <div className="todo-list important-noturgent">
+            <TodoList todos={importantNoturgentList} />
+          </div>
         </div>
-        <div className="todo-list notimportant-urgent">
+        <div>
           <h2>Not Important & Urgent</h2>
-          <TodoList todos={notimportantUrgentList} />
+          <div className="todo-list notimportant-urgent">
+            <TodoList todos={notimportantUrgentList} />
+          </div>
         </div>
-        <div className="todo-list notimportant-noturgent">
+        <div>
           <h2>Not Important & Not Urgent</h2>
-          <TodoList todos={notimportantNoturgentList} />
+          <div className="todo-list notimportant-noturgent">
+            <TodoList todos={notimportantNoturgentList} />
+          </div>
         </div>
       </section>
     </>

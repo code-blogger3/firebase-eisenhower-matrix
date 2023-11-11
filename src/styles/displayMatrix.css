@@ -1,20 +1,27 @@
-section {
-    /* height: 100vh;
-    display: flex; */
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    
-}
+
 .eisenhower-matrix{
     display: grid;
         grid-template-columns: repeat(2, 1fr);
-        grid-gap: 20px;
+        grid-gap: 10px;
         place-items: center;
+        margin: 0px 13rem;
+        box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.55),
+                10px 10px 15px rgba(70, 70, 70, 0.12);
+            padding: 40px 20px;
+            border-radius: 10px;
+
 }
 .todo-list{
-    padding: 10px;
-    max-height: 300px;
-        /* Adjust the maximum height as needed */
+ 
+    padding: 17px 13rem;
+    height: 254px;
         overflow-y: auto;
+            margin-bottom: 25px;
+    border: none;
+    background-color: transparent;
+    box-shadow:  inset -10px -10px 15px rgba(255,255,255,0.55),
+    inset 10px 10px 15px rgba(70,70,70,0.12);
+    width: 90%;
+    border-radius: 7px;
+    outline: none;
 }

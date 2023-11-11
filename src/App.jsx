@@ -1,12 +1,5 @@
 import { db } from "./db/firbaseConfig";
-import {
-  collection,
-  getDocs,
-  doc,
-  addDoc,
-  deleteDoc,
-  onSnapshot,
-} from "firebase/firestore";
+import { collection, addDoc, onSnapshot } from "firebase/firestore";
 import "./App.css";
 import AddTodo from "./components/AddTodo";
 import DisplayMatrix from "./components/DisplayMatrix";

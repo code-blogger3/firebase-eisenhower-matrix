@@ -1,17 +1,16 @@
-import React from "react";
+import { db } from "../db/firbaseConfig";
+import { doc, deleteDoc } from "firebase/firestore";
+import "../styles/todoTask.css";
 
 function TodoTask({ todo }) {
+  const deleteTodo = async (id) => {
+    const TodoDoc = doc(db, "todos", id);
+    await deleteDoc(TodoDoc);
+  };
   return (
     <li>
-      <label>
-        <input
-          type="checkbox"
-          // checked={completed}
-          // onChange={(e) => toggleTodo(id, e.target.checked)}
-        />
-        {todo.todo}
-      </label>
-      <button>Delete</button>
+      <span>{todo.todo}</span>
+      <button onClick={() => deleteTodo(todo.id)}>Delete</button>
     </li>
   );
 }

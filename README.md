@@ -5,8 +5,7 @@
 -filtered state
 
 problem
--scroll
--grid
+-toggle bug
 -signs
 
 steps
