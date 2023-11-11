@@ -6,15 +6,23 @@ function AddTodo({ createTodo }) {
 
   function handleSubmit(e) {
     e.preventDefault();
-    const categoryValue = e.nativeEvent.submitter.value;
-    createTodo({ todo: newTodo, category: categoryValue });
-    setNewTodo("");
+    if (newTodo != "") {
+      const categoryValue = e.nativeEvent.submitter.value;
+      createTodo({ todo: newTodo, category: categoryValue });
+      setNewTodo("");
+    }
   }
-
+  const categories = [
+    "Important&Urgent",
+    "Important&Noturgent",
+    "Notimportant&Urgent",
+    "Notimportant&Noturgent",
+  ];
+  const buttonColors = ["#FF5733", "#FFC300", "#33FF57", "#334DFF"];
   return (
     <>
       <form onSubmit={handleSubmit}>
-        <div>
+        <div className="inputWrapper">
           <label htmlFor="todo">New todo</label>
           <input
             type="text"
@@ -24,10 +32,15 @@ function AddTodo({ createTodo }) {
           />
         </div>
         <div>
-          <button value="Important&Urgent">Important&Urgent</button>
-          <button value="Important&Noturgent">Important&Noturgent</button>
-          <button value="Notimportant&Urgent">Notimportant&Urgent</button>
-          <button value="Notimportant&Noturgent">Notimportant&Noturgent</button>
+          {categories.map((category, i) => (
+            <button
+              value={category}
+              id={i}
+              style={{ backgroundColor: buttonColors[i] }}
+            >
+              {category}
+            </button>
+          ))}
         </div>
       </form>
     </>

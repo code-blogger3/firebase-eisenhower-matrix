@@ -3,17 +3,14 @@ form {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    margin: 30px 17rem 50px;
-
-   
-  padding: 1rem;
+    margin: 16px 17rem 14px;
     box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.55),
             10px 10px 15px rgba(70, 70, 70, 0.12);
-        padding: 40px 20px;
+        padding: 25px 9px;
         border-radius: 10px;
 }
 input[type='text']{
-        margin-bottom: 25px;
+        margin-bottom: 15px;
             border: none;
             background-color: transparent;
             box-shadow: inset -10px -10px 15px rgba(255, 255, 255, 0.55),
@@ -23,28 +20,25 @@ input[type='text']{
             border-radius: 7px;
             outline: none;
 }
-div {
-    margin-top: 10px;
-    /* Adjust the margin-top value as needed */
+.inputWrapper{
+    display: flex;
+    width: 400px;
+    text-transform: uppercase;
 }
-
-label {
-    margin-bottom: 5px;
-    /* Adjust the margin-bottom value as needed */
+#1{
+    color: red;
 }
-
 
 button {
+    margin: 0.3rem 0.5rem;
         border: none;
         text-align: center;
         font: inherit;
-        color: inherit;
-        text-decoration: none;
+        /* text-decoration: none; */
+        cursor: pointer;
         border-radius: 30px;
         padding: 10px;
         transition: box-shadow 0.3s ease;
-        /* Adding a smooth transition for the box-shadow */
-
         box-shadow: 0 0 0 rgba(255, 255, 255, 0.1), 10px 10px 15px rgba(70, 70, 70, 0.2);
     }
 

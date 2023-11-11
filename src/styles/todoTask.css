@@ -2,9 +2,13 @@ li {
     list-style: none;
     display: flex;
     gap: 1rem;
-    /* Remove default list styles */
 }
 
 li span{
-    margin-top: 10px;
+    margin-top: 19px;
+}
+button svg {
+    width: 29px;
+    height: 24px;
+    fill: red;
 }

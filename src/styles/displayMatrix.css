@@ -1,22 +1,20 @@
 
 .eisenhower-matrix{
     display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-gap: 10px;
-        place-items: center;
-        margin: 0px 13rem;
-        box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.55),
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+    margin: 0px 13rem;
+    box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.55),
                 10px 10px 15px rgba(70, 70, 70, 0.12);
-            padding: 40px 20px;
-            border-radius: 10px;
+     padding: 20px 20px;
+        border-radius: 10px;
 
 }
 .todo-list{
- 
     padding: 17px 13rem;
-    height: 254px;
-        overflow-y: auto;
-            margin-bottom: 25px;
+    height: 190px;
+    overflow-y: auto;
+     margin-bottom: 25px;
     border: none;
     background-color: transparent;
     box-shadow:  inset -10px -10px 15px rgba(255,255,255,0.55),
@@ -24,4 +22,8 @@
     width: 90%;
     border-radius: 7px;
     outline: none;
+}
+h2{
+    text-align: center;
+    padding-bottom: 6px;
 }
