@@ -44,22 +44,3 @@ function AddTodo({ createTodo }) {
 }
 
 export default AddTodo;
-
-{
-  /* {buttons.map((button, index) => (
-  <button key={index} onClick={categoryClicks[index]}>
-    {button}
-  </button>
-))} */
-}
-
-// const buttons = [
-//   "Important&Urgent",
-//   "Important&Noturgent",
-//   "Notimportant&Urgent",
-//   "Notimportant&Noturgent",
-// ];
-
-// const categoryClicks = buttons.map((categoryValue) =>
-//   handleCategoryClick(categoryValue)
-// // );
