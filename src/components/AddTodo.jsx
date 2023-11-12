@@ -18,7 +18,7 @@ function AddTodo({ createTodo }) {
     "Notimportant&Urgent",
     "Notimportant&Noturgent",
   ];
-  const buttonColors = ["#FF5733", "#FFC300", "#33FF57", "#334DFF"];
+  const buttonColors = ["#FF5733", "#334DFF", "#33FF57", "#FFC300"];
   return (
     <>
       <form onSubmit={handleSubmit}>
@@ -33,11 +33,7 @@ function AddTodo({ createTodo }) {
         </div>
         <div>
           {categories.map((category, i) => (
-            <button
-              value={category}
-              id={i}
-              style={{ backgroundColor: buttonColors[i] }}
-            >
+            <button value={category} id={i} style={{ color: buttonColors[i] }}>
               {category}
             </button>
           ))}
