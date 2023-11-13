@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "../styles/addTodo.css";
 
 function AddTodo({ createTodo }) {
-  const [newTodo, setNewTodo] = useState("");
+  const [newTodo, setNewTodo] = u;
 
   function handleSubmit(e) {
     e.preventDefault();
