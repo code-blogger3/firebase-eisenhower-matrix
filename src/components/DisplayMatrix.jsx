@@ -9,14 +9,16 @@ function DisplayMatrix({ todos }) {
   };
   return (
     <>
-      {todos.map((todo, id) => {
-        return (
-          <li key={id}>
-            <span>{todo.todo}</span>
-            <button onClick={() => deleteTodo(todo.id)}>Delete</button>
-          </li>
-        );
-      })}
+      <div>
+        {todos.map((todo, id) => {
+          return (
+            <li key={id}>
+              <span>{todo.todo}</span>
+              <button onClick={() => deleteTodo(todo.id)}>Delete</button>
+            </li>
+          );
+        })}
+      </div>
     </>
   );
 }
