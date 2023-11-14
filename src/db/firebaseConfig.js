@@ -4,11 +4,11 @@ import { getFirestore } from "@firebase/firestore";
 
 const firebaseConfig = {
   apiKey: import.meta.env.VITE_FIREBASE_KEY,
-  authDomain: "eisenhower-matrix-5bd1c.firebaseapp.com",
-  projectId: "eisenhower-matrix-5bd1c",
-  storageBucket: "eisenhower-matrix-5bd1c.appspot.com",
-  messagingSenderId: "529551807260",
-  appId: "1:529551807260:web:d584a43edad806cf9860d9",
+  authDomain: "eisenhower-matrix-196c4.firebaseapp.com",
+  projectId: "eisenhower-matrix-196c4",
+  storageBucket: "eisenhower-matrix-196c4.appspot.com",
+  messagingSenderId: "1039428558809",
+  appId: "1:1039428558809:web:7e9e1c3be6b629bdb043c8",
 };
 
 // Initialize Firebase
