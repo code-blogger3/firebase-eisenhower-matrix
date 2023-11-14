@@ -1,0 +1,14 @@
+div {
+    display: grid;
+    place-items: center;
+}
+
+li {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+li span {
+    margin-top: 19px;
+}
